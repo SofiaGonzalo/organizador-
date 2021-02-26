@@ -2,8 +2,8 @@ class Task < ApplicationRecord
   belongs_to :category
 
   validates :name, :description, presence: true
-    validates :name, uniqyeness: {case_sensitive: false}
-    validates :due_date_validity
+    validates :name, uniqueness: {case_sensitive: false}
+    validate :due_date_validity
 
     def due_date_validity 
       return if due_date.blank?

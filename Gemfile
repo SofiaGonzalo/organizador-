@@ -28,6 +28,7 @@ gem 'simple_form'
 gem 'annotate'
 gem 'hamlit'
 gem 'rails-i18n'
+gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
