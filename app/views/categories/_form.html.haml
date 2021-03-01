@@ -1,10 +1,15 @@
 = simple_form_for (@category) do |f|
     = f.error_notification 
-    = f.error_notification message: %f.object.errors 
+    = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
     .form-inputs 
         = f.input :name, label: t('.name')
-        = f.input :description, label: t('.description')
+        = f.input :description
+        = f.input :due_date
+        = f.association :category
+        .participants 
+            = f.simple_fields_for :participating_users do |g|
+                = render 'participating_users_fields', f: g
 
     .form-actions
         = f.button :submit
