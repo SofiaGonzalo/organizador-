@@ -30,6 +30,7 @@ gem 'hamlit'
 gem 'rails-i18n'
 gem 'devise'
 gem 'cocoon'
+gem 'cancancan'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
